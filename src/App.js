@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Spline from "@splinetool/react-spline";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="landing-page">
+  
+      <header className="header">
+        <h1>Experimentando con Spline</h1>
+        <p>Explora nuestro modelo interactivo en 3D, intenta haciendo Scroll y Click derecho para manipular el objeto</p>
       </header>
+      <div className="spline-container">
+        <Spline scene="https://prod.spline.design/vkHuDR9pP-DzLw4H/scene.splinecode" />
+      </div>
+      <div className="cta">
+        <a
+          href="https://spline.design/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="cta-button"
+        >
+          Explorar Más
+        </a>
+      </div>
     </div>
   );
 }
